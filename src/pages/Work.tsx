@@ -1,0 +1,139 @@
+import { motion } from 'framer-motion';
+import { FiGithub, FiExternalLink, FiArrowRight } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
+
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  tags: string[];
+  image: string;
+  demoUrl?: string;
+  codeUrl?: string;
+}
+
+const projects: Project[] = [
+  {
+    id: 1,
+    title: 'Buzz',
+    description: 'A social media platform allowing users to connect, share posts, and engage with content.',
+    tags: ['React', 'Node.js', 'MongoDB'],
+    image: 'https://i.ibb.co/7TML0nQ/Screenshot-2025-05-19-014707.png',
+    demoUrl: 'https://buzz-kuldeep2602.vercel.app/',
+    codeUrl: 'https://github.com/Kuldeep2602/buzz'
+  },
+  {
+    id: 2,
+    title: 'Chat-Room',
+    description: 'A real-time chat application with Socket.IO. Create/join rooms and chat instantly.',
+    tags: ['React', 'Socket.IO', 'Node.js'],
+    image: 'https://i.ibb.co/gM4K5mTV/Screenshot-2025-05-19-015559.png',
+    demoUrl: 'https://chat-app-fe-psi.vercel.app/',
+    codeUrl: 'https://github.com/Kuldeep2602/chat_app_be'
+  },
+  {
+    id: 3,
+    title: 'News App',
+    description: 'A modern news application with real-time updates and bookmark functionality.',
+    tags: ['React Native', 'API', 'Firebase'],
+    image: 'https://i.ibb.co/8nnLfHDD/Screenshot-2025-05-19-020139.png',
+    demoUrl: 'https://expo.dev/accounts/kuldeepsingh1637/projects/news-app/builds/f9a57e9e-3d55-4644-983d-a059ba1c0e35',
+    codeUrl: 'https://github.com/Kuldeep2602/news-app'
+  },
+];
+
+const Work: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-[#0a192f] text-gray-200">
+      {/* Navigation */}
+      <nav className="py-6 px-4 sm:px-8 lg:px-12">
+        <div className="max-w-7xl mx-auto flex justify-between items-center">
+          <Link to="/" className="text-xl font-medium">
+            Kuldeep Singh
+          </Link>
+  
+        </div>
+      </nav>
+
+      {/* Main Content */}
+      <main className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-16"
+        >
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Projects</h1>
+         
+        </motion.div>
+
+        {/* Projects Grid */}
+        <div className="grid gap-12">
+          {projects.map((project, index) => (
+            <motion.article
+              key={project.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="group"
+            >
+              <div className="flex flex-col md:flex-row gap-8 items-start">
+                <div className="w-full md:w-1/2 overflow-hidden rounded-lg h-64">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="w-full md:w-1/2">
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    {project.tags.map((tag, i) => (
+                      <span
+                        key={i}
+                        className="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <h2 className="text-2xl font-bold mb-2 text-white group-hover:text-blue-400 transition-colors">
+                    {project.title}
+                  </h2>
+                  <p className="text-gray-300 mb-4">
+                    {project.description}
+                  </p>
+                  <div className="flex items-center space-x-4">
+                    {project.codeUrl && (
+                      <a
+                        href={project.codeUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-sm font-medium text-blue-600 hover:underline"
+                      >
+                        View Code <FiArrowRight className="ml-1" />
+                      </a>
+                    )}
+                    {project.demoUrl && (
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-sm font-medium text-blue-600 hover:underline"
+                      >
+                        Live Demo <FiExternalLink className="ml-1 text-xs" />
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </motion.article>
+          ))}
+        </div>
+      </main>
+
+      
+    </div>
+  );
+};
+
+export default Work;
