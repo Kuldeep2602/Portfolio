@@ -76,7 +76,7 @@ const LandingPage = () => {
             
             <div className="mt-auto grid grid-cols-2 gap-4 w-full max-w-md">
               <a 
-                href="https://drive.google.com/file/d/1cGQj3yYtoyOuGP9HOnSbSQ8Ygy_Qzh68/view?usp=sharing" 
+                href="https://drive.google.com/file/d/1CUwObFFDrLuQcMZY0L96w5c5nOt8wfIr/view?usp=sharing" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-white/10 hover:bg-white/20 text-white px-4 py-3 rounded-xl flex items-center transition-all duration-200 text-sm"
