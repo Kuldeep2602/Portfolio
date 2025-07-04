@@ -20,8 +20,40 @@ const projects: Project[] = [
     tags: ['React', 'Node.js', 'MongoDB', 'tailwindcss']
   },
   {
-    title: 'Task Management Apwedfadfadp',
-    description: 'A collaborative task management application with real-time updates and team features.',
+    title: 'Chat-Room Application',
+    description: 'A real-time chat application with Socket.IO. Create/join rooms and chat instantly with other users.',
+    imageUrl: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80',
+    demoUrl: 'https://chat-app-fe-psi.vercel.app/',
+    codeUrl: 'https://github.com/Kuldeep2602/chat_app_be',
+    tags: ['React', 'Socket.IO', 'Node.js', 'Real-time']
+  },
+  {
+    title: 'News Mobile App',
+    description: 'A modern news application with real-time updates and bookmark functionality built with React Native.',
+    imageUrl: 'https://images.unsplash.com/photo-1504711331083-9c895941bf81?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80',
+    demoUrl: 'https://expo.dev/accounts/kuldeepsingh1637/projects/news-app/builds/f9a57e9e-3d55-4644-983d-a059ba1c0e35',
+    codeUrl: 'https://github.com/Kuldeep2602/news-app',
+    tags: ['React Native', 'API', 'Firebase', 'Mobile']
+  },
+  {
+    title: 'Portfolio Website',
+    description: 'A responsive portfolio website built with React, TypeScript, and Tailwind CSS featuring smooth animations.',
+    imageUrl: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80',
+    demoUrl: '#',
+    codeUrl: 'https://github.com/Kuldeep2602/Portfolio',
+    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion']
+  },
+  {
+    title: 'E-Learning Platform',
+    description: 'A comprehensive e-learning platform with course management, video streaming, and progress tracking.',
+    imageUrl: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80',
+    demoUrl: '#',
+    codeUrl: '#',
+    tags: ['React', 'Node.js', 'MySQL', 'Express']
+  },
+  {
+    title: 'Task Management System',
+    description: 'A collaborative task management application with real-time updates, team features, and advanced filtering.',
     imageUrl: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
     demoUrl: '#',
     codeUrl: '#',

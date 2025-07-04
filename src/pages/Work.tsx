@@ -40,6 +40,51 @@ const projects: Project[] = [
     demoUrl: 'https://expo.dev/accounts/kuldeepsingh1637/projects/news-app/builds/f9a57e9e-3d55-4644-983d-a059ba1c0e35',
     codeUrl: 'https://github.com/Kuldeep2602/news-app'
   },
+  {
+    id: 4,
+    title: 'Portfolio Website',
+    description: 'A responsive portfolio website built with React, TypeScript, and Tailwind CSS featuring smooth animations and modern design.',
+    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+    image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80',
+    demoUrl: '#',
+    codeUrl: 'https://github.com/Kuldeep2602/Portfolio'
+  },
+  {
+    id: 5,
+    title: 'E-Learning Platform',
+    description: 'A comprehensive e-learning platform with course management, video streaming, and progress tracking.',
+    tags: ['React', 'Node.js', 'MySQL', 'Express'],
+    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80',
+    demoUrl: '#',
+    codeUrl: '#'
+  },
+  {
+    id: 6,
+    title: 'Weather Dashboard',
+    description: 'A dynamic weather dashboard with location-based forecasts, interactive maps, and weather alerts.',
+    tags: ['React', 'Weather API', 'Chart.js', 'Geolocation'],
+    image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80',
+    demoUrl: '#',
+    codeUrl: '#'
+  },
+  {
+    id: 7,
+    title: 'Task Management System',
+    description: 'A collaborative task management application with real-time updates, team collaboration, and advanced filtering.',
+    tags: ['React', 'Firebase', 'Redux', 'Material-UI'],
+    image: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80',
+    demoUrl: '#',
+    codeUrl: '#'
+  },
+  {
+    id: 8,
+    title: 'Movie Database App',
+    description: 'A movie discovery app with search functionality, detailed movie information, and personal watchlists.',
+    tags: ['React', 'TMDb API', 'Redux', 'CSS Modules'],
+    image: 'https://images.unsplash.com/photo-1489599313606-8b47da8e8bd6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80',
+    demoUrl: '#',
+    codeUrl: '#'
+  },
 ];
 
 const Work: React.FC = () => {

@@ -17,12 +17,30 @@ interface ProjectCardProps {
 const projects: Project[] = [
   {
     id: 1,
-    title: 'E-commerce Platform',
-    description: 'A full-stack e-commerce platform with user authentication, product catalog, and payment integration.',
-    tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    image: '/project1.jpg',
-    github: '#',
-    demo: '#',
+    title: 'Buzz Social Platform',
+    description: 'A full-featured social media platform with user authentication, post sharing, and real-time interactions.',
+    tags: ['React', 'Node.js', 'MongoDB', 'Socket.IO'],
+    image: 'https://images.unsplash.com/photo-1607082349566-0c3c1cf485e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    github: 'https://github.com/Kuldeep2602/buzz',
+    demo: 'https://buzz-kuldeep2602.vercel.app/',
+  },
+  {
+    id: 2,
+    title: 'Real-time Chat Application',
+    description: 'A modern chat application with room creation, real-time messaging, and user presence indicators.',
+    tags: ['React', 'Socket.IO', 'Node.js', 'Express'],
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    github: 'https://github.com/Kuldeep2602/chat_app_be',
+    demo: 'https://chat-app-fe-psi.vercel.app/',
+  },
+  {
+    id: 3,
+    title: 'News Mobile App',
+    description: 'A React Native news application with category filtering, bookmarks, and offline reading capabilities.',
+    tags: ['React Native', 'Firebase', 'API Integration', 'Expo'],
+    image: 'https://images.unsplash.com/photo-1504711331083-9c895941bf81?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+    github: 'https://github.com/Kuldeep2602/news-app',
+    demo: 'https://expo.dev/accounts/kuldeepsingh1637/projects/news-app/builds/f9a57e9e-3d55-4644-983d-a059ba1c0e35',
   },
 
 ];
