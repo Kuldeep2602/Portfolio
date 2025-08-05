@@ -15,7 +15,7 @@ const projects: Project[] = [
     title: 'Buzz',
     description: 'A social media platform allowing users to connect, share posts, and engage with content. Built with React, Node.js, and MongoDB for a seamless user experience.',
     imageUrl: 'https://i.ibb.co/7TML0nQ/Screenshot-2025-05-19-014707.png',
-    demoUrl: 'https://buzz-kuldeep2602.vercel.app/',
+    demoUrl: 'https://buzz-fe-1.vercel.app',
     codeUrl: 'https://github.com/Kuldeep2602/buzz',
     tags: ['React', 'Node.js', 'MongoDB', 'tailwindcss']
   },
