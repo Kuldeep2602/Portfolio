@@ -19,7 +19,7 @@ const Contact = () => {
           <div>
             <p className="text-lg md:text-xl mb-6">
               Have a project in mind or want to collaborate? 
-              Feel free to reach out !
+              Feel free to reach out !!
             </p>
             
             <div className="space-y-4">
