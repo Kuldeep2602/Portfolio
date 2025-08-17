@@ -64,7 +64,7 @@ const About = () => {
               </div>
               
               <a 
-                href="https://drive.google.com/file/d/1cGQj3yYtoyOuGP9HOnSbSQ8Ygy_Qzh68/view?usp=sharing" 
+                href="https://drive.google.com/file/d/1CUwObFFDrLuQcMZY0L96w5c5nOt8wfIr/view?usp=sharing" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-4 px-6 rounded-xl flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1"
