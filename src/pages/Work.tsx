@@ -18,7 +18,7 @@ const projects: Project[] = [
     title: 'Buzz',
     description: 'A social media platform allowing users to connect, share posts, and engage with content.',
     tags: ['React', 'Node.js', 'MongoDB'],
-    image: 'https://i.ibb.co/7TML0nQ/Screenshot-2025-05-19-014707.png',
+    image: 'https://picsum.photos/800/600?random=1',
     demoUrl: 'https://buzz-kuldeep2602.vercel.app/',
     codeUrl: 'https://github.com/Kuldeep2602/buzz'
   },
@@ -36,7 +36,7 @@ const projects: Project[] = [
     title: 'Chat-Room',
     description: 'A real-time chat application with Socket.IO. Create/join rooms and chat instantly.',
     tags: ['React', 'Socket.IO', 'Node.js'],
-    image: 'https://i.ibb.co/gM4K5mTV/Screenshot-2025-05-19-015559.png',
+    image: 'https://picsum.photos/800/600?random=2',
     demoUrl: 'https://chat-app-fe-psi.vercel.app/',
     codeUrl: 'https://github.com/Kuldeep2602/chat_app_be'
   },
@@ -45,7 +45,7 @@ const projects: Project[] = [
     title: 'News App',
     description: 'A modern news application with real-time updates and bookmark functionality.',
     tags: ['React Native', 'API', 'Firebase'],
-    image: 'https://i.ibb.co/8nnLfHDD/Screenshot-2025-05-19-020139.png',
+    image: 'https://picsum.photos/800/600?random=3',
     demoUrl: 'https://expo.dev/accounts/kuldeepsingh1637/projects/news-app/builds/f9a57e9e-3d55-4644-983d-a059ba1c0e35',
     codeUrl: 'https://github.com/Kuldeep2602/news-app'
   },
