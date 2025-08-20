@@ -15,7 +15,7 @@ const projects: Project[] = [
     title: 'Buzz',
     description: 'A social media platform allowing users to connect, share posts, and engage with content. Built with React, Node.js, and MongoDB for a seamless user experience.',
     imageUrl: 'https://i.ibb.co/7TML0nQ/Screenshot-2025-05-19-014707.png',
-    demoUrl: 'https://buzz-kuldeep2602.vercel.app/',
+    demoUrl: 'https://buzz-fe-1.vercel.app',
     codeUrl: 'https://github.com/Kuldeep2602/buzz',
     tags: ['React', 'Node.js', 'MongoDB', 'tailwindcss']
   },
@@ -26,6 +26,14 @@ const projects: Project[] = [
     demoUrl: 'https://ci-cd-bday.vercel.app/',
     codeUrl: 'https://lnkd.in/gxq4nsZb',
     tags: ['GitHub Actions', 'AWS EC2', 'Next.js', 'PM2']
+  },
+  {
+    title: 'E-Commerce Platform',
+    description: 'A full-stack e-commerce solution with Google OAuth + JWT security, Razorpay payments (INR ready), automated order notifications, and lightning-fast Tailwind CSS. Zero to production-ready with authentication, payments, admin panel, and email automation.',
+    imageUrl: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80',
+    demoUrl: 'https://e-com-ashen-iota.vercel.app',
+    codeUrl: 'https://github.com/Kuldeep2602/e-commerce',
+    tags: ['React', 'Node.js', 'Express', 'Tailwind', 'OAuth', 'Razorpay']
   },
   {
     title: 'Chat-Room',

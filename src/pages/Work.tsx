@@ -19,7 +19,7 @@ const projects: Project[] = [
     description: 'A social media platform allowing users to connect, share posts, and engage with content.',
     tags: ['React', 'Node.js', 'MongoDB'],
     image: 'https://i.ibb.co/7TML0nQ/Screenshot-2025-05-19-014707.png',
-    demoUrl: 'https://buzz-kuldeep2602.vercel.app/',
+    demoUrl: 'https://buzz-fe-1.vercel.app',
     codeUrl: 'https://github.com/Kuldeep2602/buzz'
   },
   {
@@ -33,6 +33,15 @@ const projects: Project[] = [
   },
   {
     id: 3,
+    title: 'E-Commerce Platform',
+    description: 'A full-stack e-commerce solution with Google OAuth + JWT security, Razorpay payments (INR ready), automated order notifications, and lightning-fast Tailwind CSS. Zero to production-ready with authentication, payments, admin panel, and email automation.',
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80',
+    demoUrl: 'https://e-com-ashen-iota.vercel.app',
+    codeUrl: 'https://github.com/Kuldeep2602/e-commerce',
+    tags: ['React', 'Node.js', 'Express', 'Tailwind', 'OAuth', 'Razorpay']
+  },
+  {
+    id: 4,
     title: 'Chat-Room',
     description: 'A real-time chat application with Socket.IO. Create/join rooms and chat instantly.',
     tags: ['React', 'Socket.IO', 'Node.js'],
@@ -41,7 +50,7 @@ const projects: Project[] = [
     codeUrl: 'https://github.com/Kuldeep2602/chat_app_be'
   },
   {
-    id: 4,
+    id: 5,
     title: 'News App',
     description: 'A modern news application with real-time updates and bookmark functionality.',
     tags: ['React Native', 'API', 'Firebase'],
@@ -53,31 +62,30 @@ const projects: Project[] = [
 
 const Work: React.FC = () => {
   return (
-    <div className="min-h-screen bg-[#0a192f] text-gray-200">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-6">
       {/* Navigation */}
-      <nav className="py-6 px-4 sm:px-8 lg:px-12">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <Link to="/" className="text-xl font-medium">
-            Kuldeep Singh
+      <nav className="py-4 px-4 sm:px-8 lg:px-12">
+        <div className="max-w-6xl mx-auto flex justify-between items-center">
+          <Link to="/" className="text-lg font-medium text-gray-800 hover:text-blue-600 transition-colors">
+            ← Back to Home
           </Link>
-  
         </div>
       </nav>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-16">
+      <main className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12 py-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="mb-16"
+          className="mb-12 text-center"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Projects</h1>
-         
+          <h1 className="text-4xl md:text-5xl font-light text-gray-800 mb-3">My Projects</h1>
+          <p className="text-base text-gray-600 font-light">A showcase of my recent work</p>
         </motion.div>
 
         {/* Projects Grid */}
-        <div className="grid gap-12">
+        <div className="grid gap-6">
           {projects.map((project, index) => (
             <motion.article
               key={project.id}
@@ -86,52 +94,54 @@ const Work: React.FC = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group"
             >
-              <div className="flex flex-col md:flex-row gap-8 items-start">
-                <div className="w-full md:w-1/2 overflow-hidden rounded-lg h-64">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="w-full md:w-1/2">
-                  <div className="flex flex-wrap gap-2 mb-3">
-                    {project.tags.map((tag, i) => (
-                      <span
-                        key={i}
-                        className="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded"
-                      >
-                        {tag}
-                      </span>
-                    ))}
+              <div className="bg-white/60 backdrop-blur-xl rounded-2xl shadow-lg hover:shadow-xl border border-white/50 p-6 transition-all duration-300 ease-out transform hover:scale-[1.02] hover:-translate-y-1">
+                <div className="flex flex-col md:flex-row gap-6 items-start">
+                  <div className="w-full md:w-2/5 overflow-hidden rounded-xl h-48">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover rounded-xl transform group-hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
-                  <h2 className="text-2xl font-bold mb-2 text-white group-hover:text-blue-400 transition-colors">
-                    {project.title}
-                  </h2>
-                  <p className="text-gray-300 mb-4">
-                    {project.description}
-                  </p>
-                  <div className="flex items-center space-x-4">
-                    {project.codeUrl && (
-                      <a
-                        href={project.codeUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center text-sm font-medium text-blue-600 hover:underline"
-                      >
-                        View Code <FiArrowRight className="ml-1" />
-                      </a>
-                    )}
-                    {project.demoUrl && (
-                      <a
-                        href={project.demoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center text-sm font-medium text-blue-600 hover:underline"
-                      >
-                        Live Demo <FiExternalLink className="ml-1 text-xs" />
-                      </a>
-                    )}
+                  <div className="w-full md:w-3/5">
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      {project.tags.map((tag, i) => (
+                        <span
+                          key={i}
+                          className="text-xs font-medium text-blue-600/80 bg-blue-50/60 backdrop-blur-sm px-2 py-1 rounded-full border border-white/40"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <h2 className="text-2xl font-medium text-gray-800/90 mb-3 group-hover:text-blue-600/90 transition-colors">
+                      {project.title}
+                    </h2>
+                    <p className="text-gray-600/80 mb-4 text-sm leading-relaxed line-clamp-3">
+                      {project.description}
+                    </p>
+                    <div className="flex items-center space-x-3">
+                      {project.codeUrl && (
+                        <a
+                          href={project.codeUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center bg-white/40 hover:bg-white/60 text-gray-700/90 font-medium shadow-md rounded-lg px-4 py-2 gap-2 text-sm transition-all duration-300 ease-out transform hover:scale-105 hover:shadow-lg backdrop-blur-md border border-white/40"
+                        >
+                          <FiArrowRight className="w-4 h-4" /> Code
+                        </a>
+                      )}
+                      {project.demoUrl && (
+                        <a
+                          href={project.demoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center bg-blue-100/60 hover:bg-blue-200/60 text-blue-700/90 font-medium shadow-md rounded-lg px-4 py-2 gap-2 text-sm transition-all duration-300 ease-out transform hover:scale-105 hover:shadow-lg backdrop-blur-md border border-white/40"
+                        >
+                          <FiExternalLink className="w-4 h-4" /> Demo
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -139,8 +149,6 @@ const Work: React.FC = () => {
           ))}
         </div>
       </main>
-
-      
     </div>
   );
 };
