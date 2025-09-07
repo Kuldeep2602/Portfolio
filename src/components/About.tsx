@@ -1,68 +1,111 @@
-import { FaUserTie, FaGraduationCap } from 'react-icons/fa';
+import { FaUserTie, FaGraduationCap, FaCode } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-12 bg-gradient-to-br from-gray-50 to-gray-100">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-16">
-          <span className="border-b-4 border-blue-600 pb-2">About Me</span>
-        </h2>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-8"
+        >
+          <h2 className="text-3xl font-light text-gray-800 mb-2">About Me</h2>
+          <p className="text-sm text-gray-600 font-light">Full Stack Developer passionate about creating exceptional digital experiences</p>
+        </motion.div>
         
-        <div className="flex flex-col md:flex-row gap-12 items-center">
-          <div className="md:w-1/3">
-            <div className="bg-gray-200 rounded-lg overflow-hidden">
-              <img 
-                src="/profile-placeholder.jpg" 
-                alt="Profile"
-                className="w-full h-auto"
-              />
-            </div>
-          </div>
-          
-          <div className="md:w-2/3">
-            <h3 className="text-2xl font-semibold mb-4">Who am I?</h3>
-            <p className="text-gray-600 mb-6">
-              I'm a passionate Full Stack Developer with a strong foundation in web development. 
-              I love turning complex problems into simple, beautiful, and intuitive solutions. 
-              With expertise in both front-end and back-end development, I create seamless 
-              user experiences with clean, efficient code.
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
-              <div className="flex items-start">
-                <div className="bg-blue-100 p-3 rounded-full mr-4">
-                  <FaUserTie className="text-blue-600 text-xl" />
-                </div>
-                <div>
-                  <h4 className="font-semibold">Experience</h4>
-                  <p className="text-gray-600">3+ Years</p>
-                  <p className="text-sm text-gray-500">Full Stack Development</p>
+        <div className="flex flex-col md:flex-row gap-6 items-start">
+          {/* Left column - Photo and contact */}
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="md:w-1/3 flex flex-col gap-4"
+          >
+            {/* Profile photo card */}
+            <div className="bg-white/60 backdrop-blur-xl rounded-2xl shadow-lg border border-white/50 p-4 overflow-hidden transition-all duration-300 hover:shadow-xl">
+              <div className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl overflow-hidden border border-white/80">
+                <div className="aspect-square flex items-center justify-center text-blue-500">
+                  <span className="text-5xl font-light">KS</span>
                 </div>
               </div>
-              
-              <div className="flex items-start">
-                <div className="bg-blue-100 p-3 rounded-full mr-4">
-                  <FaGraduationCap className="text-blue-600 text-xl" />
-                </div>
-                <div>
-                  <h4 className="font-semibold">Education</h4>
-                  <p className="text-gray-600">B.Tech in Computer Science</p>
-                  <p className="text-sm text-gray-500">University Name, Year</p>
-                </div>
+              <div className="mt-4 text-center">
+                <h3 className="text-xl font-medium text-gray-800">Kuldeep Singh</h3>
+                <p className="text-blue-600 text-sm font-medium mt-1 bg-blue-50/60 px-3 py-1 rounded-full inline-block">Full Stack Developer</p>
               </div>
             </div>
             
-            <div className="mt-8">
+            {/* Download CV button */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.4 }}
+            >
               <a 
-                href="/resume.pdf" 
+                href="https://drive.google.com/file/d/1W1nLUwRmCLbCBWnbV7ogf2gEhl-0tZf6/view?usp=drive_link" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+                className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-medium rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-md border border-blue-400/40"
               >
                 Download CV
               </a>
+            </motion.div>
+          </motion.div>
+          
+          {/* Right column - Bio and skills */}
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="md:w-2/3 flex flex-col gap-4"
+          >
+            {/* Bio */}
+            <div className="bg-white/60 backdrop-blur-xl rounded-2xl shadow-lg border border-white/50 p-6 transition-all duration-300 hover:shadow-xl">
+              <div className="flex items-center mb-3">
+                <div className="p-2 bg-blue-50 rounded-xl mr-3 border border-white/40 shadow-sm">
+                  <FaUserTie className="text-blue-600 text-lg" />
+                </div>
+                <h3 className="text-xl font-medium text-gray-800">My Journey</h3>
+              </div>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                I'm a passionate Full Stack Developer with expertise in building modern web applications.
+                With 3+ years of experience, I create seamless user experiences with clean, efficient code,
+                combining thoughtful design and performance optimization to deliver exceptional digital products.
+              </p>
             </div>
-          </div>
+            
+           
+            
+            {/* Skills */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.8 }}
+              className="bg-white/60 backdrop-blur-xl rounded-2xl shadow-lg border border-white/50 p-6 transition-all duration-300 hover:shadow-xl"
+            >
+              <div className="flex items-center mb-3">
+                <div className="p-2 bg-blue-50 rounded-xl mr-3 border border-white/40 shadow-sm">
+                  <FaCode className="text-blue-600 text-lg" />
+                </div>
+                <h3 className="text-xl font-medium text-gray-800">Skills</h3>
+              </div>
+              
+              <div className="flex flex-wrap gap-2">
+                {['React', 'TypeScript', 'Next.js', 'Node.js', 'MongoDB', 'Tailwind', 'MySQL', 'WebRTC', 'C++'].map((skill, i) => (
+                  <motion.span
+                    key={i}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.2, delay: 0.1 * i + 0.8 }}
+                    className="bg-blue-50/60 backdrop-blur-sm text-blue-600/90 px-3 py-1 text-xs rounded-lg font-medium border border-white/40 shadow-sm"
+                  >
+                    {skill}
+                  </motion.span>
+                ))}
+              </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>

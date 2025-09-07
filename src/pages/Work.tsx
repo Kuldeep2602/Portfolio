@@ -35,7 +35,7 @@ const projects: Project[] = [
     id: 3,
     title: 'E-Commerce Platform',
     description: 'A full-stack e-commerce solution with Google OAuth + JWT security, Razorpay payments (INR ready), automated order notifications, and lightning-fast Tailwind CSS. Zero to production-ready with authentication, payments, admin panel, and email automation.',
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80',
+    image: '/images/ecommerce-new.png',
     demoUrl: 'https://e-com-ashen-iota.vercel.app',
     codeUrl: 'https://github.com/Kuldeep2602/e-commerce',
     tags: ['React', 'Node.js', 'Express', 'Tailwind', 'OAuth', 'Razorpay']
@@ -51,6 +51,15 @@ const projects: Project[] = [
   },
   {
     id: 5,
+    title: 'Vigovia Travel Platform',
+    description: 'A comprehensive travel planning platform that helps users discover destinations, create itineraries, and book accommodations. Features include personalized recommendations, interactive maps, and real-time availability updates.',
+    tags: ['React', 'Node.js', 'MongoDB', 'Google Maps API', 'Authentication', 'Responsive Design'],
+    image: 'https://images.unsplash.com/photo-1503220317375-aaad61436b1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
+    demoUrl: 'https://vigovia-travel.vercel.app',
+    codeUrl: 'https://github.com/Kuldeep2602/vigovia-travel'
+  },
+  {
+    id: 6,
     title: 'News App',
     description: 'A modern news application with real-time updates and bookmark functionality.',
     tags: ['React Native', 'API', 'Firebase'],
