@@ -43,7 +43,7 @@ const About = () => {
               transition={{ duration: 0.3, delay: 0.4 }}
             >
               <a 
-                href="https://drive.google.com/file/d/1W1nLUwRmCLbCBWnbV7ogf2gEhl-0tZf6/view?usp=drive_link" 
+                href="https://drive.google.com/file/d/1jXxlcOX6-BeI_859h2KO7r2dAKBeSYLp/view?usp=sharing" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-medium rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-md border border-blue-400/40"

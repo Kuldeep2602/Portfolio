@@ -49,7 +49,7 @@ const LandingPage = () => {
               
               {/* Social Links */}
               <div className="grid grid-cols-2 gap-3 mt-6">
-                <a href="https://drive.google.com/file/d/1W1nLUwRmCLbCBWnbV7ogf2gEhl-0tZf6/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="bg-white/30 hover:bg-white/50 text-white/90 font-medium shadow-lg rounded-xl px-3 py-2 flex items-center gap-2 text-sm transition-all duration-300 ease-out transform hover:scale-105 hover:-translate-y-1 hover:shadow-xl active:scale-95 backdrop-blur-md border border-white/30">
+                <a href="https://drive.google.com/file/d/1jXxlcOX6-BeI_859h2KO7r2dAKBeSYLp/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="bg-white/30 hover:bg-white/50 text-white/90 font-medium shadow-lg rounded-xl px-3 py-2 flex items-center gap-2 text-sm transition-all duration-300 ease-out transform hover:scale-105 hover:-translate-y-1 hover:shadow-xl active:scale-95 backdrop-blur-md border border-white/30">
                   <FileText className="w-4 h-4" /> Resume
                 </a>
                 <a href="https://github.com/Kuldeep2602" target="_blank" rel="noopener noreferrer" className="bg-white/30 hover:bg-white/50 text-white/90 font-medium shadow-lg rounded-xl px-3 py-2 flex items-center gap-2 text-sm transition-all duration-300 ease-out transform hover:scale-105 hover:-translate-y-1 hover:shadow-xl active:scale-95 backdrop-blur-md border border-white/30">

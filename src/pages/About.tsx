@@ -83,12 +83,15 @@ const About = () => {
                 <h2 className="text-xl font-medium text-gray-800">My Journey</h2>
               </div>
               
-              <p className="text-gray-600 text-sm leading-relaxed mb-0">
-                I'm a passionate developer with expertise in building modern web applications. 
-                With a strong foundation in both frontend and backend technologies, I create 
-                seamless user experiences and scalable solutions. My approach combines clean code, 
-                thoughtful design, and performance optimization to deliver exceptional digital products.
-              </p>
+            
+<p className="text-gray-600 text-sm leading-relaxed mb-3">
+  My experience is rooted in building <strong>production-grade applications</strong> with a product-aware mindset.        
+  As a <strong className="font-medium text-gray-900">Full Stack Developer Intern</strong> at <a href="https://www.whatbytes.com/" target="_blank" rel="noopener noreferrer" className="font-medium text-indigo-600 hover:underline">WhatBytes</a>, I build and scale high-performance MERN/Next.js and Django framework , contributing directly to live, production-level projects.
+</p>
+<p className="text-gray-600 text-sm leading-relaxed mb-0">
+  This deep technical work is balanced by my time as a <strong className="font-medium text-gray-900">Product Intern</strong> at <a href="https://leapscholar.com/" target="_blank" rel="noopener noreferrer" className="font-medium text-indigo-600 hover:underline">Leap Scholar</a>, where I analyzed user needs to guide product decisions. This dual perspective allows me to not only build features—but to build the <strong className="font-medium text-gray-900">right features</strong> that solve real problems.
+</p>
+
             </div>
 
             {/* Skills section */}
@@ -106,7 +109,7 @@ const About = () => {
               </div>
               
               <div className="flex flex-wrap gap-2">
-                {['React', 'TypeScript', 'Next.js', 'Node.js', 'MongoDB', 'Tailwind CSS', 'MySQL', 'WebRTC', 'C++', 'Redux', 'Express', 'Git', 'RESTful APIs'].map((skill, i) => (
+                {['Django','React.js', 'Next.js', 'TypeScript', 'Node.js', 'MongoDB', 'Tailwind CSS', 'MySQL', 'C++', 'Python', 'Redux', 'Express', 'Git', 'RESTful APIs'].map((skill, i) => (
                   <motion.div 
                     key={i}
                     initial={{ opacity: 0, scale: 0.9 }}
