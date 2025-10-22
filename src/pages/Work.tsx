@@ -25,7 +25,7 @@ const projects: Project[] = [
   {
     id: 2,
     title: 'CI/CD Pipeline with GitHub Actions & AWS',
-    description: 'Created a Next.js birthday greeting application with multiple themes. Configured GitHub Actions workflow for automated deployments. Set up secure SSH deployment to AWS EC2. Implemented PM2 for Node.js process management. Established zero-downtime deployments. Reduced deployment time from 30+ minutes to under 5 minutes. Eliminated manual deployment errors.',
+    description: 'Implemented a zero-downtime CI/CD pipeline with GitHub Actions for automated deployment to AWS EC2, managed by PM2.',
     tags: ['GitHub Actions', 'AWS EC2', 'Next.js', 'PM2'],
     image: 'https://images.unsplash.com/photo-1556075798-4825dfaaf498?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
     demoUrl: 'https://ci-cd-bday.vercel.app/',
@@ -34,7 +34,7 @@ const projects: Project[] = [
   {
     id: 3,
     title: 'E-Commerce Platform',
-    description: 'A full-stack e-commerce solution with Google OAuth + JWT security, Razorpay payments (INR ready), automated order notifications, and lightning-fast Tailwind CSS. Zero to production-ready with authentication, payments, admin panel, and email automation.',
+    description: 'An e-commerce app with secure Google OAuth/JWT authentication and seamless Razorpay payment integration.',
     image: '/images/ecommerce-new.png',
     demoUrl: 'https://e-com-ashen-iota.vercel.app',
     codeUrl: 'https://github.com/Kuldeep2602/e-commerce',
