@@ -52,8 +52,8 @@ const projects: Project[] = [
   {
     id: 5,
     title: 'Vigovia Travel Platform',
-    description: 'A comprehensive travel planning platform that helps users discover destinations, create itineraries, and book accommodations. Features include personalized recommendations, interactive maps, and real-time availability updates.',
-    tags: ['React', 'Node.js', 'MongoDB', 'Google Maps API', 'Authentication', 'Responsive Design'],
+    description: 'A comprehensive travel planning platform with detailed pdf generator.',
+    tags: ['React', 'Node.js', 'MongoDB', 'Authentication', 'Responsive Design'],
     image: 'https://images.unsplash.com/photo-1503220317375-aaad61436b1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
     demoUrl: 'https://vigovia-travel.vercel.app',
     codeUrl: 'https://github.com/Kuldeep2602/vigovia-travel'
