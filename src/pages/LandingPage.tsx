@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { FolderOpen, User, Mail, FileText, Github, Linkedin, Twitter } from 'lucide-react';
 

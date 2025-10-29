@@ -24,7 +24,7 @@ export const projects: Project[] = [
     title: 'CI/CD Pipeline with GitHub Actions & AWS',
     description: 'Implemented a zero-downtime CI/CD pipeline with GitHub Actions for automated deployment to AWS EC2, managed by PM2.',
     tags: ['GitHub Actions', 'AWS EC2', 'Next.js', 'PM2'],
-    image: 'https://images.unsplash.com/photo-1556075798-4825dfaaf498?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+    image: 'https://images.unsplash.com/photo-1556075798-4825dfaaf498?auto=format&fit=crop&w=600&q=75',
     demoUrl: 'https://ci-cd-bday.vercel.app/',
     codeUrl: 'https://lnkd.in/gxq4nsZb'
   },
@@ -51,7 +51,7 @@ export const projects: Project[] = [
     title: 'Vigovia Travel Platform',
     description: 'A comprehensive travel planning platform with detailed pdf generator.',
     tags: ['React', 'Node.js', 'MongoDB', 'Authentication', 'Responsive Design'],
-    image: 'https://images.unsplash.com/photo-1503220317375-aaad61436b1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
+    image: 'https://images.unsplash.com/photo-1503220317375-aaad61436b1b?auto=format&fit=crop&w=600&q=75',
     demoUrl: 'https://vigovia-travel.vercel.app',
     codeUrl: 'https://github.com/Kuldeep2602/vigovia-travel'
   },
