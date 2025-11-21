@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { ExternalLink, Github } from 'lucide-react';
 
 interface ProjectCardProps {
   title: string;
@@ -18,48 +19,48 @@ const ProjectCard = ({
   tags,
 }: ProjectCardProps) => {
   return (
-    <motion.div 
-      className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200 dark:border-gray-700"
+    <motion.div
+      className="glass-panel rounded-3xl overflow-hidden group"
       whileHover={{ y: -5 }}
       transition={{ duration: 0.3 }}
     >
-      <div className="relative h-48 overflow-hidden">
-        <img 
-          src={imageUrl} 
-          alt={title} 
-          className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+      <div className="relative h-56 overflow-hidden">
+        <img
+          src={imageUrl}
+          alt={title}
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-          <div className="flex space-x-2">
-            <a 
+        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+          <div className="flex space-x-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+            <a
               href={demoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md transition-colors"
+              className="px-5 py-2.5 bg-white text-black text-sm font-medium rounded-full hover:scale-105 transition-transform flex items-center gap-2"
             >
-              Live Demo
+              <ExternalLink size={16} /> Live Demo
             </a>
-            <a 
+            <a
               href={codeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-white/10 hover:bg-white/20 text-white text-sm font-medium rounded-md transition-colors"
+              className="px-5 py-2.5 bg-black/50 text-white backdrop-blur-md border border-white/20 text-sm font-medium rounded-full hover:bg-black/70 hover:scale-105 transition-all flex items-center gap-2"
             >
-              View Code
+              <Github size={16} /> Code
             </a>
           </div>
         </div>
       </div>
-      
+
       <div className="p-6">
-        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{title}</h3>
-        <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">{description}</p>
-        
+        <h3 className="text-xl font-bold text-gray-900 mb-2 tracking-tight">{title}</h3>
+        <p className="text-gray-600 text-sm mb-4 font-light leading-relaxed line-clamp-2">{description}</p>
+
         <div className="flex flex-wrap gap-2">
           {tags.map((tag, index) => (
-            <span 
+            <span
               key={index}
-              className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-xs rounded-full"
+              className="px-3 py-1 bg-blue-50 border border-blue-100 text-blue-600 text-xs rounded-full font-medium"
             >
               {tag}
             </span>

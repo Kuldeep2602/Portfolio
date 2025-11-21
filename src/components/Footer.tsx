@@ -5,58 +5,41 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="container mx-auto px-4">
+    <footer className="border-t border-glass-border mt-20 bg-black/20 backdrop-blur-sm">
+      <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-6 md:mb-0">
-            <h2 className="text-2xl font-bold mb-2">Your Name</h2>
-            <p className="text-gray-400">Full Stack Developer</p>
+          <div className="mb-6 md:mb-0 text-center md:text-left">
+            <h2 className="text-2xl font-bold mb-2 text-white tracking-tight">Kuldeep Singh</h2>
+            <p className="text-gray-400 font-light">Full Stack Developer</p>
           </div>
-          
+
           <div className="flex space-x-6 mb-6 md:mb-0">
-            <a 
-              href="https://github.com/yourusername" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
-              aria-label="GitHub"
-            >
-              <FiGithub size={24} />
-            </a>
-            <a 
-              href="https://linkedin.com/in/yourprofile" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
-              aria-label="LinkedIn"
-            >
-              <FiLinkedin size={24} />
-            </a>
-            <a 
-              href="https://twitter.com/yourusername" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
-              aria-label="Twitter"
-            >
-              <FiTwitter size={24} />
-            </a>
-            <a 
-              href="mailto:your.email@example.com" 
-              className="text-gray-400 hover:text-white transition-colors"
-              aria-label="Email"
-            >
-              <FiMail size={24} />
-            </a>
+            {[
+              { icon: FiGithub, href: "https://github.com/Kuldeep2602", label: "GitHub" },
+              { icon: FiLinkedin, href: "https://www.linkedin.com/in/kuldeep-singh2602/", label: "LinkedIn" },
+              { icon: FiTwitter, href: "https://x.com/kuldeep26021", label: "Twitter" },
+              { icon: FiMail, href: "mailto:kuldeep.singh2602@gmail.com", label: "Email" }
+            ].map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-full bg-white/5 hover:bg-white/10 text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 border border-white/5 hover:border-white/20"
+                aria-label={item.label}
+              >
+                <item.icon size={20} />
+              </a>
+            ))}
           </div>
         </div>
-        
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+
+        <div className="border-t border-white/10 mt-8 pt-8 text-center text-gray-500 text-sm font-light">
           <p>
-            &copy; {currentYear} Your Name. All rights reserved.
+            &copy; {currentYear} Kuldeep Singh. All rights reserved.
           </p>
-          <p className="mt-2 flex items-center justify-center">
-            Made with <FaHeart className="mx-1 text-red-500" /> using React & Tailwind CSS
+          <p className="mt-2 flex items-center justify-center gap-1">
+            Made with <FaHeart className="text-red-500/80" /> using React & Tailwind CSS
           </p>
         </div>
       </div>
