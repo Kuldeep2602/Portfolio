@@ -28,13 +28,13 @@ const LandingPage = () => {
 
   return (
     <motion.div
-      className="flex flex-col items-center justify-center min-h-[80vh] pt-12 md:pt-20"
+      className="flex flex-col items-center justify-start min-h-[80vh] pt-8 md:pt-16"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
       {/* Header */}
-      <motion.div className="text-center mb-8" variants={itemVariants}>
+      <motion.div className="text-center mb-6" variants={itemVariants}>
         <h1 className="text-4xl md:text-5xl font-light text-gray-900 dark:text-white mb-3 tracking-tighter text-glow transition-colors duration-300">
           <GlassBubbleText shimmer>Kuldeep Singh</GlassBubbleText>
         </h1>
