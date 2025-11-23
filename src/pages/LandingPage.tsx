@@ -82,7 +82,7 @@ const LandingPage = () => {
           {/* Social Links */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-5 relative z-10">
             {[
-              { name: 'Resume', icon: FileText, href: 'https://drive.google.com/file/d/1jXxlcOX6-BeI_859h2KO7r2dAKBeSYLp/view?usp=sharing' },
+              { name: 'Resume', icon: FileText, href: 'https://drive.google.com/file/d/1FKKIlL_NYfJxPopVgLHYZ-QEZGWiW5id/view?usp=drive_link' },
               { name: 'GitHub', icon: Github, href: 'https://github.com/Kuldeep2602' },
               { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/in/kuldeep-singh2602/' },
               { name: 'Twitter', icon: Twitter, href: 'https://x.com/kuldeep26021' }

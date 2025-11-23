@@ -10,7 +10,7 @@ import ThemeToggle from './components/ThemeToggle';
 function App() {
   return (
     <ThemeProvider>
-      <div className="min-h-screen flex flex-col transition-colors duration-300">
+      <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
         <ThemeToggle />
         <main className="flex-grow px-4 md:px-8 max-w-7xl mx-auto w-full">
           <AnimatePresence mode="wait">
