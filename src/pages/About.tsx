@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
-    <div className="min-h-screen p-4 md:p-8 text-gray-900 dark:text-white transition-colors duration-300">
+    <div className="min-h-screen p-4 md:p-6 text-gray-900 dark:text-white transition-colors duration-300">
       {/* Navigation */}
-      <nav className="py-3 px-4 sm:px-6 mb-6">
+      <nav className="py-2 px-4 sm:px-6 mb-2">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
           <Link to="/" className="text-base font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
             ← Back to Home
@@ -19,22 +19,22 @@ const About = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-12"
+          className="text-center mb-4"
         >
-          <h1 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-3 tracking-tight text-glow transition-colors duration-300">About Me</h1>
+          <h1 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2 tracking-tight text-glow transition-colors duration-300">About Me</h1>
           <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 font-light transition-colors duration-300">Full Stack Developer passionate about creating exceptional digital experiences</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* Left column - Profile */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="glass-panel rounded-3xl p-8 h-fit"
+            className="glass-panel rounded-3xl p-5 h-fit"
           >
             <div className="flex flex-col items-center text-center">
-              <div className="w-32 h-32 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 mb-6 overflow-hidden border-4 border-white/50 dark:border-white/20 shadow-2xl">
+              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 mb-4 overflow-hidden border-4 border-white/50 dark:border-white/20 shadow-2xl">
                 <div className="w-full h-full flex items-center justify-center text-white">
                   <span className="text-4xl font-light">KS</span>
                 </div>
@@ -72,10 +72,10 @@ const About = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="md:col-span-2 flex flex-col gap-6"
+            className="md:col-span-2 flex flex-col gap-4"
           >
             {/* Journey section */}
-            <div className="glass-panel rounded-3xl p-8">
+            <div className="glass-panel rounded-3xl p-5">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-blue-50 dark:bg-blue-900/30 rounded-xl mr-4 border border-blue-100 dark:border-blue-800 transition-colors duration-300">
                   <FiUser className="text-blue-600 dark:text-blue-400 w-6 h-6" />
@@ -97,7 +97,7 @@ const About = () => {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="glass-panel rounded-3xl p-8"
+              className="glass-panel rounded-3xl p-5"
             >
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-purple-50 dark:bg-purple-900/30 rounded-xl mr-4 border border-purple-100 dark:border-purple-800 transition-colors duration-300">
