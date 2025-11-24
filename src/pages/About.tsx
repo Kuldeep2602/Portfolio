@@ -83,13 +83,35 @@ const About = () => {
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white transition-colors duration-300">My Journey</h2>
               </div>
 
-              <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed mb-4 font-light transition-colors duration-300">
-                My experience is rooted in building <strong className="text-gray-900 dark:text-white font-medium">production-grade applications</strong> with a product-aware mindset.
-                As a <strong className="font-medium text-gray-900 dark:text-white">Full Stack Developer Intern</strong> at <a href="https://www.whatbytes.com/" target="_blank" rel="noopener noreferrer" className="font-medium text-blue-600 dark:text-blue-400 hover:text-blue-500 hover:underline">WhatBytes</a>, I build and scale high-performance MERN/Next.js and Django framework , contributing directly to live, production-level projects.
-              </p>
-              <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed mb-0 font-light transition-colors duration-300">
-                This deep technical work is balanced by my time as a <strong className="font-medium text-gray-900 dark:text-white">Product Intern</strong> at <a href="https://leapscholar.com/" target="_blank" rel="noopener noreferrer" className="font-medium text-blue-600 dark:text-blue-400 hover:text-blue-500 hover:underline">Leap Scholar</a>, where I analyzed user needs to guide product decisions. This dual perspective allows me to not only build features—but to build the <strong className="font-medium text-gray-900 dark:text-white">right features</strong> that solve real problems.
-              </p>
+              <div className="space-y-6">
+                <div className="relative pl-6 border-l-2 border-blue-100 dark:border-blue-800">
+                  <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-500 border-4 border-white dark:border-gray-900"></div>
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-white">Full Stack Developer Intern</h3>
+                  <div className="flex justify-between items-center mb-2">
+                    <a href="https://www.whatbytes.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 font-medium hover:underline">WhatBytes</a>
+                    <span className="text-xs text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">Oct 2025 – Present</span>
+                  </div>
+                  <ul className="list-disc list-outside ml-4 text-sm text-gray-600 dark:text-gray-300 space-y-1">
+                    <li>Engineered a complete redesign of an LLM evaluation dashboard using Next.js, reducing redundant code by 25%.</li>
+                    <li>Enhanced data performance with React Query, cutting API re-fetch overhead by 30%.</li>
+                    <li>Integrated RESTful APIs with real-time polling to track Celery task progress, reducing latency by 25sec.</li>
+                  </ul>
+                </div>
+
+                <div className="relative pl-6 border-l-2 border-purple-100 dark:border-purple-800">
+                  <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-purple-500 border-4 border-white dark:border-gray-900"></div>
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-white">Product Management Intern</h3>
+                  <div className="flex justify-between items-center mb-2">
+                    <a href="https://leapscholar.com/" target="_blank" rel="noopener noreferrer" className="text-purple-600 dark:text-purple-400 font-medium hover:underline">Leap Scholar</a>
+                    <span className="text-xs text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">July – Sept 2025</span>
+                  </div>
+                  <ul className="list-disc list-outside ml-4 text-sm text-gray-600 dark:text-gray-300 space-y-1">
+                    <li>Analyzed user needs and market research to support product development decisions.</li>
+                    <li>Collaborated with cross-functional teams to contribute to ongoing projects and performance initiatives.</li>
+                    <li>Supported performance tracking by analyzing KPIs to find improvement opportunities.</li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
             {/* Skills section */}
@@ -107,7 +129,7 @@ const About = () => {
               </div>
 
               <div className="flex flex-wrap gap-3">
-                {['Django', 'React.js', 'Next.js', 'TypeScript', 'Node.js', 'MongoDB', 'Tailwind CSS', 'MySQL', 'C++', 'Python', 'Redux', 'Express', 'Git', 'RESTful APIs'].map((skill, i) => (
+                {['C++', 'Python', 'JavaScript', 'TypeScript', 'SQL', 'React.js', 'Next.js', 'Express.js', 'Django', 'Node.js', 'Tailwind CSS', 'Docker', 'AWS CI/CD', 'PostgreSQL', 'Git'].map((skill, i) => (
                   <motion.div
                     key={i}
                     initial={{ opacity: 0, scale: 0.9 }}
