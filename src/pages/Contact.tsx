@@ -78,7 +78,7 @@ const Contact = () => {
               </div>
 
               <div className="mt-12 pt-8 border-t border-gray-200/50 dark:border-white/10">
-                <p className="text-gray-500 dark:text-gray-400 text-sm transition-colors duration-300">Based in Noida, India • Available for Remote Work</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm transition-colors duration-300">Based in Bengaluru, India • Available for Remote Work</p>
               </div>
             </div>
 

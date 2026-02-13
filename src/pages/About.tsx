@@ -22,7 +22,7 @@ const About = () => {
           className="text-center mb-4"
         >
           <h1 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2 tracking-tight text-glow transition-colors duration-300">About Me</h1>
-          <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 font-light transition-colors duration-300">Full Stack Developer passionate about creating exceptional digital experiences</p>
+          <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 font-light transition-colors duration-300">Sde</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -56,7 +56,7 @@ const About = () => {
               </div>
 
               <a
-                href="https://drive.google.com/file/d/1FKKIlL_NYfJxPopVgLHYZ-QEZGWiW5id/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1NU-WnQIDKKHjSZQF5gnELpCJlEtaxQfT/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full bg-blue-600 hover:bg-blue-500 text-white font-medium py-3 px-4 rounded-xl flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg shadow-blue-600/20 text-sm"
@@ -82,6 +82,28 @@ const About = () => {
                 </div>
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white transition-colors duration-300">My Journey</h2>
               </div>
+     
+              
+              
+              <div className="space-y-6">
+                <div className="relative pl-6 border-l-2 border-blue-100 dark:border-blue-800">
+                  <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-500 border-4 border-white dark:border-gray-900"></div>
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-white">Software Developer Intern</h3>
+                  <div className="flex justify-between items-center mb-2">
+                    <a href="https://getclevrr.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 font-medium hover:underline">Clevrr AI</a>
+                    <span className="text-xs text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">Jan 2026 – Present</span>
+                  </div>
+                  <ul className="list-disc list-outside ml-4 text-sm text-gray-600 dark:text-gray-300 space-y-1">
+                    <li>Architected a multi-agent execution pipeline to replace probabilistic LLM-driven actions with deterministic tool orchestration,
+improving reliability and execution determinism</li>
+                    <li>Engineered high-performance React/Next.js components and optimized the data aggregation layer, reducing query latency by
+95%.</li>
+                    <li>Developing backend services and APIs for real-time ETL ingestion/normalization (Shopify, Meta Ads, Razorpay), powering an
+AI analytics platform unifying 50+ channels into one dashboard.</li>
+<br></br>
+                  </ul>
+                </div>
+              </div>
 
               <div className="space-y-6">
                 <div className="relative pl-6 border-l-2 border-blue-100 dark:border-blue-800">
@@ -89,26 +111,12 @@ const About = () => {
                   <h3 className="text-lg font-bold text-gray-900 dark:text-white">Full Stack Developer Intern</h3>
                   <div className="flex justify-between items-center mb-2">
                     <a href="https://www.whatbytes.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 font-medium hover:underline">WhatBytes</a>
-                    <span className="text-xs text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">Oct 2025 – Present</span>
+                    <span className="text-xs text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">Oct 2025 – Jan 2026</span>
                   </div>
                   <ul className="list-disc list-outside ml-4 text-sm text-gray-600 dark:text-gray-300 space-y-1">
                     <li>Engineered a complete redesign of an LLM evaluation dashboard using Next.js, reducing redundant code by 25%.</li>
                     <li>Enhanced data performance with React Query, cutting API re-fetch overhead by 30%.</li>
                     <li>Integrated RESTful APIs with real-time polling to track Celery task progress, reducing latency by 25sec.</li>
-                  </ul>
-                </div>
-
-                <div className="relative pl-6 border-l-2 border-purple-100 dark:border-purple-800">
-                  <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-purple-500 border-4 border-white dark:border-gray-900"></div>
-                  <h3 className="text-lg font-bold text-gray-900 dark:text-white">Product Management Intern</h3>
-                  <div className="flex justify-between items-center mb-2">
-                    <a href="https://leapscholar.com/" target="_blank" rel="noopener noreferrer" className="text-purple-600 dark:text-purple-400 font-medium hover:underline">Leap Scholar</a>
-                    <span className="text-xs text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">July – Sept 2025</span>
-                  </div>
-                  <ul className="list-disc list-outside ml-4 text-sm text-gray-600 dark:text-gray-300 space-y-1">
-                    <li>Analyzed user needs and market research to support product development decisions.</li>
-                    <li>Collaborated with cross-functional teams to contribute to ongoing projects and performance initiatives.</li>
-                    <li>Supported performance tracking by analyzing KPIs to find improvement opportunities.</li>
                   </ul>
                 </div>
               </div>
@@ -129,7 +137,7 @@ const About = () => {
               </div>
 
               <div className="flex flex-wrap gap-3">
-                {['C++', 'Python', 'JavaScript', 'TypeScript', 'SQL', 'React.js', 'Next.js', 'Express.js', 'Django', 'Node.js', 'Tailwind CSS', 'Docker', 'AWS CI/CD', 'PostgreSQL', 'Git'].map((skill, i) => (
+                {['C++', 'Python','LangGraph', 'JavaScript', 'TypeScript', 'SQL', 'React.js', 'Next.js', 'Express.js', 'Django', 'Node.js', 'Tailwind CSS', 'Docker', 'AWS CI/CD', 'PostgreSQL','Clickhouse', 'Git'].map((skill, i) => (
                   <motion.div
                     key={i}
                     initial={{ opacity: 0, scale: 0.9 }}

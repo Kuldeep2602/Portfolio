@@ -63,7 +63,7 @@ const LandingPage = () => {
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
                 </span>
                 <span className="bg-white/60 dark:bg-white/10 backdrop-blur-md px-3 py-1 rounded-full text-xs font-medium text-gray-700 dark:text-gray-300 border border-white/40 dark:border-white/10 shadow-sm transition-colors duration-300">
-                  Available for work
+                  Building
                 </span>
               </div>
 
@@ -78,14 +78,14 @@ const LandingPage = () => {
                   </GlassBubbleText>
                 </h2>
                 <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 font-light max-w-md leading-relaxed transition-colors duration-300">
-                  Specializing in modern web applications with React, TypeScript, Next.js, and cutting-edge design systems.
+                  Applied AI Engineer with hands-on experience developing deterministic multi-agent architectures & strong foundation in full-stack development.
                 </p>
               </div>
 
               {/* Social Links */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-5 relative z-10">
                 {[
-                  { name: 'Resume', icon: FileText, href: 'https://drive.google.com/file/d/1FKKIlL_NYfJxPopVgLHYZ-QEZGWiW5id/view?usp=drive_link' },
+                  { name: 'Resume', icon: FileText, href: 'https://drive.google.com/file/d/1NU-WnQIDKKHjSZQF5gnELpCJlEtaxQfT/view?usp=sharing' },
                   { name: 'GitHub', icon: Github, href: 'https://github.com/Kuldeep2602' },
                   { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/in/kuldeep-singh2602/' },
                   { name: 'Twitter', icon: Twitter, href: 'https://x.com/kuldeep26021' }
