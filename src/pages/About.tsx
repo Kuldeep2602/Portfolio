@@ -1,159 +1,244 @@
-import { FiArrowRight, FiMail, FiMapPin, FiUser, FiCode } from 'react-icons/fi';
+import type { CSSProperties } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import {
+  FiArrowUpRight,
+  FiBriefcase,
+  FiLinkedin,
+  FiMail,
+  FiMapPin,
+  FiPhone
+} from 'react-icons/fi';
+
+const experiences = [
+  {
+    role: 'SDE Intern',
+    company: 'Clevrr AI',
+    href: 'https://getclevrr.com/',
+    location: 'Bengaluru, India',
+    period: 'Jan 2026 - Present',
+    accent: 'var(--red)',
+    bullets: [
+      'Architected a multi-agent execution pipeline that replaces probabilistic LLM-driven actions with deterministic tool orchestration for more reliable production execution.',
+      'Developed multiple sub-ReAct agents orchestrated by a parent agent and integrated them into async workflows for parallel execution.',
+      'Built a GCP sandbox mirroring production with Cloud Run for frontend/backend services, Cloud SQL for PostgreSQL, and a GKE-hosted ClickHouse cluster.',
+      'Developing backend APIs for real-time ETL ingestion and normalization across Shopify, Meta Ads, and Razorpay for an AI analytics platform unifying 50+ channels.'
+    ]
+  },
+  {
+    role: 'Full Stack Developer Intern',
+    company: 'WhatBytes',
+    href: 'https://www.whatbytes.com/',
+    location: 'Bengaluru, India',
+    period: 'Oct 2025 - Jan 2026',
+    accent: 'var(--blue)',
+    bullets: [
+      'Redesigned an LLM evaluation dashboard using Next.js, modular CSS, and component refactoring, reducing redundant code and improving maintainability by 25%.',
+      'Integrated REST APIs with real-time polling to track Celery task progress, reducing response latency by 25 seconds.',
+      'Integrated Stripe and built end-to-end billing flows for enterprise subscription management.',
+      'Collaborated in an Agile environment, resolving pre-production bugs through Postman testing and code reviews.'
+    ]
+  }
+];
+
+const profileDiscStyle = {
+  width: 178,
+  height: 178,
+  '--disc-a': '#ff3b17',
+  '--disc-b': '#d9ff3f',
+  '--disc-accent': '#111111'
+} as CSSProperties;
+
+const metrics = [
+  // { label: 'LeetCode', value: '200+' },
+  // { label: 'Channels', value: '50+' },
+  // { label: 'GPA', value: '8.6' }
+];
+
+const contactItems = [
+  { id: 'phone', label: '+91 63789 86140', value: '+916378986140', icon: FiPhone },
+  { id: 'email', label: 'kuldeeprathore1637@gmail.com', value: 'kuldeeprathore1637@gmail.com', icon: FiMail }
+] as const;
 
 const About = () => {
+  const [activeExperience, setActiveExperience] = useState(0);
+  const [copiedContact, setCopiedContact] = useState<'phone' | 'email' | null>(null);
+
+  const copyContact = async (kind: 'phone' | 'email', value: string) => {
+    try {
+      await navigator.clipboard.writeText(value);
+      setCopiedContact(kind);
+      window.setTimeout(() => setCopiedContact(null), 1500);
+    } catch {
+      setCopiedContact(null);
+    }
+  };
+
   return (
-    <div className="min-h-screen p-4 md:p-6 text-gray-900 dark:text-white transition-colors duration-300">
-      {/* Navigation */}
-      <nav className="py-2 px-4 sm:px-6 mb-2">
-        <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <Link to="/" className="text-base font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
-            ← Back to Home
-          </Link>
+    <motion.div
+      className="relative min-h-screen overflow-hidden px-1 py-4 text-gray-950 md:py-8 dark:text-white"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.35 }}
+    >
+      <motion.nav
+        initial={{ opacity: 0, y: -14 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.35 }}
+        className="abstract-panel rounded-full px-5 py-3 mb-8 flex items-center justify-between gap-4"
+      >
+        <Link to="/" className="abstract-mono text-sm font-bold tracking-[0.18em] text-gray-950 dark:text-white">
+          KULDEEP
+        </Link>
+        <div className="flex items-center gap-4 text-xs md:text-sm font-semibold uppercase tracking-[0.12em] text-gray-700 dark:text-gray-300">
+          <Link to="/projects" className="hover:text-blue-600 dark:hover:text-blue-400">Projects</Link>
+          <Link to="/about" className="hover:text-blue-600 dark:hover:text-blue-400">About</Link>
         </div>
-      </nav>
+      </motion.nav>
 
-      <div className="max-w-6xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+      <div className="mb-5 grid gap-5 lg:grid-cols-[360px_minmax(0,1fr)]">
+        <motion.aside
+          initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-4"
+          transition={{ duration: 0.4 }}
+          className="abstract-panel relative overflow-hidden rounded-[2rem] p-5 lg:sticky lg:top-6 lg:self-start"
         >
-          <h1 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2 tracking-tight text-glow transition-colors duration-300">About Me</h1>
-          <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 font-light transition-colors duration-300">Sde</p>
-        </motion.div>
+          <div className="absolute -right-12 -top-12 opacity-20">
+            <div className="vinyl-disc" style={profileDiscStyle}>
+              <span className="vinyl-cover">
+                <span>KS</span>
+              </span>
+              <span className="vinyl-hole" />
+            </div>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {/* Left column - Profile */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-            className="glass-panel rounded-3xl p-5 h-fit"
-          >
-            <div className="flex flex-col items-center text-center">
-              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 mb-4 overflow-hidden border-4 border-white/50 dark:border-white/20 shadow-2xl">
-                <div className="w-full h-full flex items-center justify-center text-white">
-                  <span className="text-4xl font-light">KS</span>
-                </div>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 transition-colors duration-300">Kuldeep Singh</h3>
-              <p className="text-blue-600 dark:text-blue-400 font-medium mb-6 bg-blue-50 dark:bg-blue-900/30 px-4 py-1.5 rounded-full inline-block text-sm border border-blue-100 dark:border-blue-800 transition-colors duration-300">Full Stack Developer</p>
+          <div className="relative z-10 flex flex-col items-center text-center">
+            <div className="vinyl-disc mb-5" style={profileDiscStyle}>
+              <span className="vinyl-cover">
+                <span>KS</span>
+              </span>
+              <span className="vinyl-hole" />
+            </div>
 
-              <div className="w-full space-y-3 mb-6">
-                <div className="flex items-center justify-center space-x-2 text-gray-600 dark:text-gray-300 bg-white/60 dark:bg-white/5 px-4 py-3 rounded-xl border border-white/40 dark:border-white/10 text-sm shadow-sm transition-all duration-300">
-                  <FiMapPin className="text-blue-500 dark:text-blue-400" />
-                  <span>Noida, India</span>
+            
+            <h1 className="text-3xl font-extrabold text-gray-950 dark:text-white">Kuldeep Singh</h1>
+            <p className="abstract-sticker mt-4 bg-[var(--acid)]">Software Engineer</p>
+
+            <div className="mt-5 grid w-full grid-cols-3 gap-2">
+              {metrics.map((metric) => (
+                <div key={metric.label} className="border-2 border-gray-950 bg-[#fffdf7] px-2 py-3 shadow-[4px_4px_0_rgba(17,17,17,0.10)] dark:border-white/15 dark:bg-white/[0.04]">
+                  <p className="text-2xl font-extrabold text-gray-950 dark:text-white">{metric.value}</p>
+                  <p className="abstract-mono mt-1 text-[10px] font-bold uppercase tracking-[0.08em] text-gray-500 dark:text-gray-400">{metric.label}</p>
                 </div>
-                <div className="flex items-center justify-center space-x-2 text-gray-600 dark:text-gray-300 bg-white/60 dark:bg-white/5 px-4 py-3 rounded-xl border border-white/40 dark:border-white/10 text-sm shadow-sm transition-all duration-300">
-                  <FiMail className="text-blue-500 dark:text-blue-400" />
-                  <a href="mailto:kuldeeprathore1637@gmail.com" className="hover:text-gray-900 dark:hover:text-white transition-colors">
-                    kuldeeprathore1637@gmail.com
-                  </a>
-                </div>
-              </div>
+              ))}
+            </div>
+
+            <div className="mt-5 w-full space-y-2.5">
+              {contactItems.map((item) => {
+                const Icon = item.icon;
+                const copied = copiedContact === item.id;
+
+                return (
+                  <button
+                    key={item.id}
+                    type="button"
+                    onClick={() => copyContact(item.id, item.value)}
+                    className="w-full min-w-0 rounded-xl border-2 border-gray-950/20 bg-[#fffdf7] px-3 py-3 text-sm text-gray-700 shadow-sm transition-colors hover:bg-[var(--blue)] dark:border-white/10 dark:bg-white/[0.04] dark:text-gray-300"
+                  >
+                    <span className="flex items-center justify-center gap-2">
+                      <Icon className="shrink-0 text-blue-600 dark:text-blue-400" />
+                      <span className="truncate">{copied ? `${item.id === 'phone' ? 'Phone' : 'Email'} copied` : item.label}</span>
+                    </span>
+                  </button>
+                );
+              })}
 
               <a
-                href="https://drive.google.com/file/d/1NU-WnQIDKKHjSZQF5gnELpCJlEtaxQfT/view?usp=sharing"
+                href="https://www.linkedin.com/in/kuldeep-singh2602/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full bg-blue-600 hover:bg-blue-500 text-white font-medium py-3 px-4 rounded-xl flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg shadow-blue-600/20 text-sm"
+                className="flex w-full min-w-0 items-center justify-center gap-2 rounded-xl border-2 border-gray-950/20 bg-[#fffdf7] px-3 py-3 text-sm text-gray-700 shadow-sm transition-colors hover:bg-[var(--blue)] dark:border-white/10 dark:bg-white/[0.04] dark:text-gray-300"
               >
-                Download CV
-                <FiArrowRight className="ml-2" />
+                <FiLinkedin className="shrink-0 text-blue-600 dark:text-blue-400" />
+                <span className="truncate">LinkedIn</span>
+                <FiArrowUpRight className="shrink-0" />
               </a>
+
+              <div className="flex w-full min-w-0 items-center justify-center gap-2 rounded-xl border-2 border-gray-950/20 bg-[#fffdf7] px-3 py-3 text-sm text-gray-700 shadow-sm dark:border-white/10 dark:bg-white/[0.04] dark:text-gray-300">
+                <FiMapPin className="shrink-0 text-blue-600 dark:text-blue-400" />
+                <span className="truncate">Bengaluru, India</span>
+              </div>
             </div>
-          </motion.div>
+          </div>
+        </motion.aside>
 
-          {/* Middle column - Experience and Education */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="md:col-span-2 flex flex-col gap-4"
-          >
-            {/* Journey section */}
-            <div className="glass-panel rounded-3xl p-5">
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-blue-50 dark:bg-blue-900/30 rounded-xl mr-4 border border-blue-100 dark:border-blue-800 transition-colors duration-300">
-                  <FiUser className="text-blue-600 dark:text-blue-400 w-6 h-6" />
-                </div>
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white transition-colors duration-300">My Journey</h2>
-              </div>
-     
-              
-              
-              <div className="space-y-6">
-                <div className="relative pl-6 border-l-2 border-blue-100 dark:border-blue-800">
-                  <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-500 border-4 border-white dark:border-gray-900"></div>
-                  <h3 className="text-lg font-bold text-gray-900 dark:text-white">Software Developer Intern</h3>
-                  <div className="flex justify-between items-center mb-2">
-                    <a href="https://getclevrr.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 font-medium hover:underline">Clevrr AI</a>
-                    <span className="text-xs text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">Jan 2026 – Present</span>
-                  </div>
-                  <ul className="list-disc list-outside ml-4 text-sm text-gray-600 dark:text-gray-300 space-y-1">
-                    <li>Architected a multi-agent execution pipeline to replace probabilistic LLM-driven actions with deterministic tool orchestration,
-improving reliability and execution determinism</li>
-                    <li>Engineered high-performance React/Next.js components and optimized the data aggregation layer, reducing query latency by
-95%.</li>
-                    <li>Developing backend services and APIs for real-time ETL ingestion/normalization (Shopify, Meta Ads, Razorpay), powering an
-AI analytics platform unifying 50+ channels into one dashboard.</li>
-<br></br>
-                  </ul>
-                </div>
-              </div>
+        <motion.main
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.08 }}
+          className="flex flex-col gap-5"
+        >
+          
 
-              <div className="space-y-6">
-                <div className="relative pl-6 border-l-2 border-blue-100 dark:border-blue-800">
-                  <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-500 border-4 border-white dark:border-gray-900"></div>
-                  <h3 className="text-lg font-bold text-gray-900 dark:text-white">Full Stack Developer Intern</h3>
-                  <div className="flex justify-between items-center mb-2">
-                    <a href="https://www.whatbytes.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 font-medium hover:underline">WhatBytes</a>
-                    <span className="text-xs text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">Oct 2025 – Jan 2026</span>
-                  </div>
-                  <ul className="list-disc list-outside ml-4 text-sm text-gray-600 dark:text-gray-300 space-y-1">
-                    <li>Engineered a complete redesign of an LLM evaluation dashboard using Next.js, reducing redundant code by 25%.</li>
-                    <li>Enhanced data performance with React Query, cutting API re-fetch overhead by 30%.</li>
-                    <li>Integrated RESTful APIs with real-time polling to track Celery task progress, reducing latency by 25sec.</li>
-                  </ul>
-                </div>
+          <section id="experience" className="abstract-panel rounded-[2rem] p-5 sm:p-6">
+            <div className="mb-6 flex items-start gap-4">
+              <div className="grid h-12 w-12 place-items-center rounded-full border-2 border-gray-950 bg-[var(--red)] text-white shadow-[5px_5px_0_rgba(17,17,17,0.12)]">
+                <FiBriefcase className="h-5 w-5" />
+              </div>
+              <div>
+                <p className="abstract-mono text-xs font-bold uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400">Experience</p>
+                <h2 className="text-3xl font-extrabold text-gray-950 dark:text-white">Recent Work</h2>
               </div>
             </div>
 
-            {/* Skills section */}
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="glass-panel rounded-3xl p-5"
-            >
-              <div className="flex items-center mb-6">
-                <div className="p-3 bg-purple-50 dark:bg-purple-900/30 rounded-xl mr-4 border border-purple-100 dark:border-purple-800 transition-colors duration-300">
-                  <FiCode className="text-purple-600 dark:text-purple-400 w-6 h-6" />
-                </div>
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white transition-colors duration-300">Skills & Expertise</h2>
-              </div>
+            <div className="space-y-5">
+              {experiences.map((experience, index) => {
+                const isActive = activeExperience === index;
 
-              <div className="flex flex-wrap gap-3">
-                {['C++', 'Python','LangGraph', 'JavaScript', 'TypeScript', 'SQL', 'React.js', 'Next.js', 'Express.js', 'Django', 'Node.js', 'Tailwind CSS', 'Docker', 'AWS CI/CD', 'PostgreSQL','Clickhouse', 'Git'].map((skill, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.2, delay: 0.05 * i + 0.4 }}
-                    className="bg-white/60 dark:bg-white/5 hover:bg-white/80 dark:hover:bg-white/10 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg text-sm font-medium border border-white/40 dark:border-white/10 transition-colors cursor-default shadow-sm"
+                return (
+                  <motion.article
+                    key={experience.company}
+                    onMouseEnter={() => setActiveExperience(index)}
+                    onFocus={() => setActiveExperience(index)}
+                    whileHover={{ y: -4, rotate: index === 0 ? -0.4 : 0.4 }}
+                    className={`relative overflow-hidden rounded-2xl border-2 p-5 transition-colors ${
+                      isActive
+                        ? 'border-gray-950 bg-[#fffdf7] dark:border-white/20 dark:bg-white/[0.06]'
+                        : 'border-gray-950/20 bg-white/55 dark:border-white/10 dark:bg-white/[0.03]'
+                    }`}
                   >
-                    {skill}
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </motion.div>
-        </div>
+                    <div className="absolute right-4 top-4 h-12 w-12 rounded-full border-2 border-gray-950 bg-[var(--accent)] opacity-90 shadow-[5px_5px_0_rgba(17,17,17,0.10)]" style={{ '--accent': experience.accent } as CSSProperties} />
+                    <div className="relative z-10 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                      <div>
+                        <p className="abstract-mono mb-2 text-xs font-bold uppercase tracking-[0.16em] text-gray-500 dark:text-gray-400">{experience.period}</p>
+                        <h3 className="text-2xl font-extrabold text-gray-950 dark:text-white">{experience.role}</h3>
+                        <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-gray-500 dark:text-gray-400">
+                          <a href={experience.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 font-bold text-blue-600 hover:underline dark:text-blue-400">
+                            {experience.company}
+                            <FiArrowUpRight />
+                          </a>
+                          <span>/</span>
+                          <span>{experience.location}</span>
+                        </div>
+                      </div>
+                    </div>
+                    <ul className="relative z-10 mt-5 space-y-2 text-sm leading-relaxed text-gray-600 dark:text-gray-300">
+                      {experience.bullets.map((bullet) => (
+                        <li key={bullet} className="flex gap-2">
+                          <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[var(--red)]" />
+                          <span>{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.article>
+                );
+              })}
+            </div>
+          </section>
+        </motion.main>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

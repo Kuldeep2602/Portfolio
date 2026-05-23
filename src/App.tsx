@@ -5,13 +5,17 @@ import LandingPage from './pages/LandingPage';
 import About from './pages/About';
 import Work from './pages/Work';
 import Contact from './pages/Contact';
+import Resume from './pages/Resume';
 import { ThemeProvider } from './context/ThemeContext';
 import ThemeToggle from './components/ThemeToggle';
+import CustomCursor from './components/CustomCursor';
 
 function App() {
   return (
     <ThemeProvider>
-      <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900 transition-colors duration-300 relative">
+      <div className="min-h-screen flex flex-col bg-[var(--paper)] dark:bg-[#0b0b0b] transition-colors duration-300 relative">
+        <CustomCursor />
+
         {/* Theme Toggle */}
         <div className="fixed top-4 right-4 md:top-6 md:right-6 z-50">
           <ThemeToggle />
@@ -23,6 +27,7 @@ function App() {
               <Route path="/" element={<LandingPage />} />
               <Route path="/about" element={<About />} />
               <Route path="/projects" element={<Work />} />
+              <Route path="/resume" element={<Resume />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </AnimatePresence>
